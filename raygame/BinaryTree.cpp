@@ -9,9 +9,14 @@ void BinaryTree::insert(int a_nValue)
 	if (m_pRoot->getData = nullptr);
 	{
 		m_pRoot->setData = a_nValue;
-		
 	}
-	While()
+	TreeNode* current;
+	TreeNode* parentnode;
+	current = m_pRoot;
+	while (current != nullptr)
+	{
+		if()
+	}
 }
 TreeNode * BinaryTree::find(int a_nValue)
 {
