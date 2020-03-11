@@ -38,6 +38,7 @@ int main()
 	tree.insert(11);
 	tree.insert(50);
 	tree.insert(25);
+	tree.find
 	//--------------------------------------------------------------------------------------
 
 	// Main game loop

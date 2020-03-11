@@ -58,6 +58,7 @@ void BinaryTree::insert(int a_nValue)
 			parentnode->setRight(current);
 		}
 }
+
 TreeNode * BinaryTree::find(int a_nValue)
 {
 	
@@ -67,18 +68,62 @@ bool BinaryTree::findNode(int a_nSearchValue, TreeNode ** ppOutNode, TreeNode **
 {
 	//Set the current node to the root
 	TreeNode* current = m_pRoot;
+	TreeNode* parent = m_pRoot;
 	//While the current node is not null
-	While(current != nullptr)
-		//If the search value equals the current node value,
+	while(current != nullptr)
+	{
+		if (a_nSearchValue = current->getData)
+		{
+			*ppOutNode = current;
+			*ppOutParent = current;
+			return true;
+			//If the search value equals the current node value,
 			//Return the current node and its parent
+		}
+		
 		//Otherwise
+		else if (a_nSearchValue < current->getData)
+		{
 			//If the search value is less than the current node
 				//Set the current node to the left child
+			parent == current;
+			current == current->getLeft();
+		}
+		else if (a_nSearchValue > current->getData)
+		{
 			//Otherwise
 				//Set the current node to the right child
+			parent == current;
+			current == current->getRight();
+		}
+			
 	//End while
 	//If the loop exits, then a match was not found, so return false
+	}
 	return false;
+}
+void BinaryTree::remove(int a_nValue)
+{
+	TreeNode* current;
+	TreeNode* parent;
+	TreeNode* minimum;
+	TreeNode* parentminimum;
+	if (findNode(a_nValue, &current, &parent))
+	{
+		if (current->getRight != nullptr)
+		{
+			while (minimum->getLeft != nullptr)
+			{
+				parentminimum = minimum;
+				minimum = current->getLeft;
+			}
+			current->setData(minimum->getData);
+			if (current == parent->getLeft())
+			{
+				
+			}
+		}
+	}
 }
 
 void BinaryTree::draw(TreeNode * selected)
